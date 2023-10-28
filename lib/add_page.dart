@@ -1,3 +1,7 @@
+// ignore_for_file: avoid_print
+
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -53,9 +57,24 @@ class _AddTodoPageState extends State<AddTodoPage> {
     const url = 'http://api.nstack.in/v1/todos';
     final uri = Uri.parse(url);
 
-    final response = await http.post(uri, body: body);
+    final response = await http.post(
+      uri,
+      body: jsonEncode(body),
+      headers: {'Content-Type': 'application/json'},
+    );
 
-    // ignore: avoid_print
-    print(response);
+    if (response.statusCode == 201) {
+      print('Creation Success');
+      showSuccessMessage('Creation Success');
+    } else {
+      print('Creation Failed');
+      print(response.body);
+    }
+  }
+
+  void showSuccessMessage(String message) {
+    final snackBar = SnackBar(content: Text(message));
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }
