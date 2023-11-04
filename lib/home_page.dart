@@ -20,8 +20,8 @@ class _HomePageState extends State<HomePage> {
         title: const Text(
           "Todo List",
           style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w900,
+            fontSize: 20,
+            fontWeight: FontWeight.w800,
             color: Colors.white,
           ),
         ),
