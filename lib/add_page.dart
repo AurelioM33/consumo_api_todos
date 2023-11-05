@@ -35,7 +35,7 @@ class _AddTodoPageState extends State<AddTodoPage> {
             minLines: 5,
             maxLines: 8,
           ),
-          const SizedBox(height: 23),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: submitData,
             child: const Text('Submit'),
