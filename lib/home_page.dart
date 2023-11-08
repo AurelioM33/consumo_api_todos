@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
           "Todo List",
           style: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+            fontWeight: FontWeight.w900,
+            color: Colors.white60,
           ),
         ),
       ),
