@@ -32,10 +32,10 @@ class _AddTodoPageState extends State<AddTodoPage> {
             controller: descriptionController,
             decoration: const InputDecoration(hintText: 'Description'),
             keyboardType: TextInputType.multiline,
-            minLines: 6,
-            maxLines: 9,
+            minLines: 5,
+            maxLines: 8,
           ),
-          const SizedBox(height: 25),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: submitData,
             child: const Text('Submit'),
